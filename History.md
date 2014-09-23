@@ -66,6 +66,16 @@ integration with Apache's Cordova/PhoneGap project.
 * Fix bug in reload-safetybelt package that resulted in reload loops in
   Chrome with cookies disabled.
 
+* Change the paths for static assets served from packages. The `:`
+  character is replaced with the `_` character in package names so as to
+  allow serving on mobile devices and ease operation on Windows. For
+  example, assets from the `abc:bootstrap` package are now served at
+  `/packages/abc_bootstrap` instead of `/packages/abc:bootstrap`.
+
+* Also change the paths within a bundled Meteor app to allow for
+  different client architectures (eg mobile). For example,
+  `bundle/programs/client` is now `bundle/programs/web.browser`.
+
 
 Patches by Github users awwx, mizzao, and mquandalle.
 
